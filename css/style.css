@@ -175,3 +175,111 @@ footer .glyphicon {
         font-size: 150px;
     }
 }
+.profile-photo{
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;   /* 원형 */
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+    margin: 0 auto;
+}
+
+/* =========================
+   About / Profile – Unified Text
+   ========================= */
+
+/* ABOUT / PROFILE 제목 */
+#about h2{
+  margin: 0 0 28px;
+  font-weight: 700;
+  color: #303030;
+}
+
+/* 이름 */
+.about-name{
+  margin: 0 0 14px;
+  font-size: 20px;
+  font-weight: 700;
+  color: #303030;
+}
+
+/* 날짜 / 학교 */
+.about-meta{
+  margin: 0 0 14px;
+  font-size: 18px;
+  font-weight: 600;
+  color: #303030;
+  line-height: 1.7;
+}
+
+/* 정체성 한 줄 */
+.about-one-liner{
+  margin: 10px 0 28px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #303030;
+  line-height: 1.7;
+}
+
+/* Focus / Currently 블록 간격만 담당 */
+.about-section{
+  margin: 0 0 24px;
+}
+
+/* Focus / Currently 텍스트 → 일반 문단처럼 */
+.about-label{
+  margin: 0 0 8px;
+  font-size: 18px;          /* 위 문장과 동일 */
+  font-weight: 600;         /* 과하지 않게 */
+  color: #303030;
+  letter-spacing: 0;        /* 대문자 느낌 제거 */
+  text-transform: none;     /* 대문자 제거 */
+  position: relative;
+  padding-left: 14px;
+}
+.about-label:before{
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 4px;
+  height: 14px;
+  background: #f4511e;
+  border-radius: 999px;
+}
+
+/* 모든 설명 문단 통일 */
+.about-text{
+  margin: 0;
+  font-size: 18px;          /* 전부 동일 */
+  font-weight: 500;
+  color: #303030;
+  line-height: 1.7;
+  max-width: 640px;
+}
+
+.about-divider{
+  width: 56px;
+  height: 3px;
+  background: #f4511e;   /* 사이트 포인트 컬러 */
+  margin: 14px 0 28px;
+  border-radius: 999px;
+}
+
+.about-card{
+  padding: 24px 24px 18px;
+  border: 1px solid #eee;
+  border-radius: 16px;
+  background: #fff;
+}
+#about .row{
+  display: flex;
+  align-items: center;
+}
+
+@media (max-width: 768px){
+  #about .row{
+    display: block;
+  }
+}
