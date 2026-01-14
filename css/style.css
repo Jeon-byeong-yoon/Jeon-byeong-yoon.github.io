@@ -407,3 +407,541 @@ footer .glyphicon {
 .work-item h4 {
   margin-bottom: 12px; /* 기존 유지 */
 }
+.thumbnail img,
+.col-sm-4 > img {
+  display: block;
+  margin-bottom: 24px;
+}
+/* =========================
+   Dieter Rams / Braun HERO
+   ========================= */
+
+/* Rams palette */
+:root {
+  --bg-main: #F7F7F5;
+  --text-main: #1E1E1E;
+  --text-sub: #6B6B6B;
+  --line-light: #DADADA;
+  --line-strong: #B0B0B0;
+}
+
+/* Hero section */
+.hero{
+  background: var(--bg-main);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 0 120px;
+}
+
+/* make sure navbar doesn't hide top of hero when clicking */
+body{
+  scroll-padding-top: 70px;
+}
+
+/* content block */
+.hero-inner{
+  max-width: 760px;
+}
+
+/* small kicker */
+.hero-kicker{
+  margin: 0 0 18px 0;
+  font-size: 12px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-sub);
+}
+
+/* title */
+.hero-title{
+  margin: 0 0 12px 0;
+  font-size: 56px;
+  font-weight: 400;          /* Rams key */
+  letter-spacing: 0.04em;
+  color: var(--text-main);
+  line-height: 1.15;
+}
+
+/* Korean name in title */
+.hero-name-ko{
+  font-size: 28px;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  margin-left: 10px;
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+/* subtitle */
+.hero-subtitle{
+  margin: 0 0 34px 0;
+  font-size: 16px;
+  letter-spacing: 0.10em;
+  color: var(--text-sub);
+}
+
+/* divider line */
+.hero-divider{
+  width: 54px;
+  height: 1px;
+  background: var(--line-strong);
+  margin: 18px 0 28px 0;
+}
+
+/* links */
+.hero-links{
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  font-size: 14px;
+  letter-spacing: 0.06em;
+}
+
+.hero-links-label{
+  color: var(--text-sub);
+  text-transform: uppercase;
+}
+
+.hero-links a{
+  color: var(--text-main);
+  text-decoration: none;
+  border-bottom: 1px solid var(--line-light);
+  padding-bottom: 2px;
+}
+
+.hero-links a:hover{
+  color: var(--text-sub);
+  border-color: var(--line-strong);
+}
+
+/* =========================
+   Navbar tweaks (optional)
+   =========================
+   If your navbar color is still orange/blue and you want
+   it to match Rams style, enable below.
+*/
+
+/*
+.navbar{
+  background: rgba(247,247,245,0.92);
+  backdrop-filter: blur(6px);
+  border-bottom: 1px solid var(--line-light);
+}
+
+.navbar li a, .navbar .navbar-brand{
+  color: var(--text-main) !important;
+}
+
+.navbar-nav li a:hover, .navbar-nav li.active a{
+  color: var(--text-main) !important;
+  background: transparent !important;
+  border-bottom: 1px solid var(--line-strong);
+}
+*/
+
+/* Responsive */
+@media (max-width: 992px){
+  .hero{
+    padding: 0 64px;
+  }
+  .hero-title{
+    font-size: 46px;
+  }
+}
+
+@media (max-width: 768px){
+  .hero{
+    padding: 0 28px;
+    min-height: 80vh;
+  }
+  .hero-title{
+    font-size: 36px;
+  }
+  .hero-name-ko{
+    display: block;
+    margin-left: 0;
+    margin-top: 8px;
+    font-size: 20px;
+  }
+  .hero-links{
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+}
+/* =========================
+   Rams / Braun Global Theme
+   ========================= */
+
+:root{
+  --bg-main:#F7F7F5;
+  --bg-card:#FFFFFF;
+  --text-main:#1E1E1E;
+  --text-sub:#6B6B6B;
+  --line-light:#E3E3E3;
+  --line-strong:#B0B0B0;
+
+  --accent:#D94A2A;
+
+  /* ✅ Braun-ish Brown */
+  --brown:#3A2F2A;        /* 메인 브라운 */
+  --brown-soft:#4A3C35;   /* hover/포인트 */
+  --brown-text:#F7F4F1;   /* 브라운 위 글자색 */
+}
+
+/* 전체 배경 톤 */
+body{
+  background: var(--bg-main);
+  color: var(--text-main);
+}
+
+/* 섹션 공통 */
+.section-rams{
+  background: var(--bg-main);
+}
+
+/* 기존 bg-grey 무력화(전체 통일 위해) */
+.bg-grey{
+  background: var(--bg-main) !important;
+}
+
+/* 제목/본문 톤 통일 */
+h2, h4{
+  color: var(--text-main);
+}
+p{
+  color: var(--text-sub);
+}
+
+/* =========================
+   Navbar Rams (남색 제거)
+   ========================= */
+.navbar-rams{
+  background: rgba(247,247,245,0.92) !important;
+  border: 0 !important;
+  border-bottom: 1px solid var(--line-light) !important;
+  backdrop-filter: blur(8px);
+}
+
+.navbar-rams .navbar-brand,
+.navbar-rams .navbar-nav>li>a{
+  color: var(--text-main) !important;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-size: 12px !important;
+}
+
+.navbar-rams .navbar-nav>li>a:hover{
+  color: var(--text-sub) !important;
+  background: transparent !important;
+}
+
+.navbar-rams .navbar-nav>li.active>a{
+  background: transparent !important;
+  color: var(--text-main) !important;
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.navbar-rams .navbar-toggle{
+  border-color: transparent !important;
+}
+.navbar-rams .icon-bar{
+  background: var(--text-main) !important;
+}
+
+/* =========================
+   Hero (Home) 이미 만든 것 유지
+   ========================= */
+.hero{
+  background: var(--bg-main);
+  min-height: 100vh;
+  display:flex;
+  align-items:center;
+  padding:0 120px;
+}
+
+.hero-inner{ max-width: 760px; }
+
+.hero-kicker{
+  margin:0 0 18px 0;
+  font-size:12px;
+  letter-spacing:0.22em;
+  text-transform:uppercase;
+  color:var(--text-sub);
+}
+
+.hero-title{
+  margin:0 0 12px 0;
+  font-size:56px;
+  font-weight:400;
+  letter-spacing:0.04em;
+  color:var(--text-main);
+  line-height:1.15;
+}
+
+.hero-name-ko{
+  font-size:28px;
+  font-weight:400;
+  letter-spacing:0.06em;
+  margin-left:10px;
+  color:var(--text-main);
+  opacity:0.9;
+}
+
+.hero-subtitle{
+  margin:0 0 34px 0;
+  font-size:16px;
+  letter-spacing:0.10em;
+  color:var(--text-sub);
+}
+
+.hero-divider{
+  width:54px;
+  height:1px;
+  background:var(--line-strong);
+  margin:18px 0 28px 0;
+}
+
+.hero-links{
+  display:flex;
+  align-items:center;
+  gap:22px;
+  font-size:14px;
+  letter-spacing:0.06em;
+}
+
+.hero-links-label{
+  color:var(--text-sub);
+  text-transform:uppercase;
+}
+
+.hero-links a{
+  color:var(--text-main);
+  text-decoration:none;
+  border-bottom:1px solid var(--line-light);
+  padding-bottom:2px;
+}
+.hero-links a:hover{
+  color:var(--text-sub);
+  border-color:var(--line-strong);
+}
+
+/* =========================
+   About Card 통일 (프레임 + 사진까지 감싸기)
+   ========================= */
+#about .row{
+  display:flex;
+  align-items:stretch;
+}
+
+.about-card{
+  background: var(--bg-card);
+  border: 1px solid var(--line-light);
+  border-radius: 16px;
+  padding: 34px 36px;
+}
+
+/* 사진 컬럼도 카드 안으로 들어오는 느낌 */
+#about .col-sm-4.text-center{
+  background: var(--bg-card);
+  border: 1px solid var(--line-light);
+  border-left: 0;
+  border-radius: 0 16px 16px 0;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding: 34px 20px;
+}
+
+#about .col-sm-8.about-card{
+  border-radius: 16px 0 0 16px;
+}
+
+/* divider */
+.about-divider{
+  width: 56px;
+  height: 3px;
+  background: var(--accent);
+  margin: 10px 0 22px;
+  border-radius: 99px;
+}
+
+.about-name{
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.about-meta{
+  margin: 0 0 8px 0;
+  color: var(--text-sub);
+}
+
+.about-one-liner{
+  margin: 18px 0 22px 0;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.about-label{
+  margin: 20px 0 8px 0;
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.about-text{
+  margin: 0 0 8px 0;
+  color: var(--text-sub);
+}
+
+/* 사진 크기/여백 줄이기 */
+.profile-photo{
+  width: 280px;
+  max-width: 100%;
+  border-radius: 999px;
+  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+}
+
+/* =========================
+   Services(PERSONALITY) Rams 카드화
+   ========================= */
+#services{
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+#services h2{
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+#services .logo-small{
+  color: var(--text-main);
+  opacity: 0.9;
+}
+
+#services .col-sm-4{
+  padding: 22px;
+}
+
+#services .col-sm-4 > span{
+  display:inline-block;
+  width: 64px;
+  height: 64px;
+  line-height: 64px;
+  border: 1px solid var(--line-light);
+  border-radius: 999px;
+  margin-bottom: 16px;
+}
+
+#services h4{
+  margin-top: 10px;
+  margin-bottom: 12px;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
+#services p{
+  max-width: 340px;
+  margin: 0 auto;
+  color: var(--text-sub);
+}
+
+/* =========================
+   Portfolio 통일 + 이미지/텍스트 간격 해결
+   ========================= */
+#portfolio{
+  padding-top: 80px;
+  padding-bottom: 90px;
+}
+
+#portfolio h2{
+  letter-spacing: 0.12em;
+  font-weight: 600;
+}
+
+.thumbnail{
+  background: var(--bg-card);
+  border: 1px solid var(--line-light) !important;
+  border-radius: 14px;
+  overflow: hidden;
+  padding: 0 !important;
+}
+
+/* 이미지 비율 통일 + 밑 설명 붙는 문제 해결 */
+.thumbnail img{
+  width: 100%;
+  height: 220px;          /* 통일 */
+  object-fit: cover;      /* 잘라서 맞춤 */
+  display:block;
+  margin: 0 !important;
+}
+
+.thumbnail p{
+  margin: 0;
+}
+
+/* 이미지 아래 텍스트 영역 padding */
+.thumbnail .caption,
+.thumbnail > p{
+  padding: 16px 18px;
+}
+
+/* 네 코드가 p를 바로 쓰고 있어서 여기도 대응 */
+.thumbnail p strong{
+  display:block;
+  margin-top: 18px;       /* 이미지랑 제목 간격 */
+  margin-bottom: 10px;    /* 제목-설명 간격 */
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.thumbnail p:nth-of-type(2){
+  padding-bottom: 18px;
+  color: var(--text-sub);
+}
+
+/* carousel 색도 Rams로 정리 */
+.carousel-control.right, .carousel-control.left{
+  color: var(--text-main);
+}
+.carousel-indicators li{
+  border-color: var(--line-strong);
+}
+.carousel-indicators li.active{
+  background-color: var(--text-main);
+}
+
+/* =========================
+   Responsive
+   ========================= */
+@media (max-width: 992px){
+  .hero{ padding: 0 64px; }
+  .hero-title{ font-size: 46px; }
+
+  #about .row{ display:block; }
+  #about .col-sm-8.about-card{
+    border-radius: 16px 16px 0 0;
+  }
+  #about .col-sm-4.text-center{
+    border-left: 1px solid var(--line-light);
+    border-top: 0;
+    border-radius: 0 0 16px 16px;
+  }
+  .profile-photo{ width: 240px; }
+}
+
+@media (max-width: 768px){
+  .hero{ padding: 0 28px; min-height: 80vh; }
+  .hero-title{ font-size: 36px; }
+  .hero-name-ko{
+    display:block; margin-left:0; margin-top:8px; font-size:20px;
+  }
+  .hero-links{ flex-wrap:wrap; gap:14px; }
+
+  .thumbnail img{ height: 200px; }
+}
+.profile-photo{
+  margin-top: 40px;   /* ← 이 값으로 위치 조절 */
+}
