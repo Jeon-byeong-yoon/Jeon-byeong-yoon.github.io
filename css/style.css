@@ -942,6 +942,27 @@ p{
 
   .thumbnail img{ height: 200px; }
 }
-.profile-photo{
-  margin-top: 40px;   /* ← 이 값으로 위치 조절 */
+/* ===== ABOUT: PHOTO POSITION FIX (put at the VERY bottom of style.css) ===== */
+
+/* about-row가 flex이든 아니든 사진 쪽 정렬을 안정적으로 제어 */
+#about .about-photo-wrap{
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;   /* 위에서부터 시작 */
+  padding-top: 120px;        /* ✅ 여기 숫자만 조절하면 사진 내려감 */
+}
+
+/* 이미지 자체는 반응형 유지 + 원형 유지 */
+#about .profile-photo{
+  width: 360px;              /* 크기 키우고 싶으면 380~420까지 */
+  max-width: 100%;
+  height: auto;
+  border-radius: 999px;
+  display: block;
+  box-shadow: 0 18px 46px rgba(0,0,0,0.08);
+}
+
+/* Bootstrap img-responsive가 width:100% 강제하는 경우 대비 */
+#about .profile-photo.img-responsive{
+  width: 360px;              /* 위와 동일하게 한번 더 고정 */
 }
