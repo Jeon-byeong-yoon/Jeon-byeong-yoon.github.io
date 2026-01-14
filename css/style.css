@@ -44,8 +44,9 @@ h4 {
 }
 .thumbnail img {
     width: 100%;
-    height: 100%;
-    margin-bottom: 10px;
+    height: 220px;        
+    object-fit: cover;   
+    margin-bottom: 0;
 }
 .carousel-control.right, .carousel-control.left {
     background-image: none;
@@ -282,4 +283,127 @@ footer .glyphicon {
   #about .row{
     display: block;
   }
+}
+/* Hero links */
+.hero-links {
+  margin-top: 30px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+}
+
+.hero-links span {
+  margin-right: 10px;
+  opacity: 0.8;
+}
+
+.hero-links a {
+  margin: 0 10px;
+  color: #fff;
+  text-decoration: none;
+  border-bottom: 2px solid rgba(255,255,255,0.5);
+  padding-bottom: 2px;
+}
+
+.hero-links a:hover {
+  border-bottom-color: #fff;
+}
+/* About: reduce empty space & enlarge photo */
+#about .about-row{
+  display: flex;
+  align-items: center;
+}
+
+#about .about-photo-wrap{
+  padding-left: 0;      /* 사진을 글 쪽으로 붙임 */
+  padding-right: 0;     /* 오른쪽 여백도 줄임 */
+}
+
+/* 사진 크기 키우기 */
+#about .profile-photo{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  margin: 0 auto;
+}
+
+/* 모바일에서는 다시 자연스럽게 */
+@media (max-width: 768px){
+  #about .about-row{
+    display: block;
+  }
+  #about .about-photo-wrap{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-top: 24px;
+  }
+  #about .profile-photo{
+    width: 220px;
+    height: 220px;
+  }
+}
+/* About big card wrapper (text + photo together) */
+#about .about-wrap{
+  border: 1px solid #eee;
+  border-radius: 18px;
+  background: #fff;
+  padding: 26px 26px;          /* 카드 바깥 여백 */
+}
+
+/* row 정렬 */
+#about .about-row{
+  display: flex;
+  align-items: center;
+}
+
+/* 이제 about-card는 "테두리"가 아니라 안쪽 패딩만 */
+#about .about-card{
+  border: none;
+  background: transparent;
+  padding: 0 10px 0 0;
+}
+
+/* 사진 영역 여백 조정 */
+#about .about-photo-wrap{
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* 사진 사이즈 */
+#about .profile-photo{
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
+  margin: 0 auto;
+}
+
+/* 모바일 대응 */
+@media (max-width: 768px){
+  #about .about-row{
+    display: block;
+  }
+  #about .about-card{
+    padding: 0;
+  }
+  #about .about-photo-wrap{
+    margin-top: 24px;
+  }
+  #about .profile-photo{
+    width: 220px;
+    height: 220px;
+  }
+}
+.work-item img {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin-bottom: 24px;
+}
+
+.work-item h4 {
+  margin-bottom: 12px; /* 기존 유지 */
 }
